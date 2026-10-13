@@ -150,20 +150,7 @@ a{ color:inherit; }
   display:flex; align-items:center; gap:12px;
   text-decoration:none; margin-inline-end:auto;
 }
-.brand__mark{ color:var(--crimson); inline-size:30px; flex:none; }
-.brand__mark svg{ inline-size:100%; height:auto; }
-.brand__text{ display:block; }
-.brand__name{
-  display:block;
-  font-family:var(--f-ui); font-weight:700;
-  font-size:21px; letter-spacing:-.015em; line-height:1.1;
-}
-.brand__sub{
-  display:block;
-  font-family:var(--f-mono); font-size:9.5px; font-weight:400;
-  letter-spacing:.34em; text-transform:uppercase;
-  color:var(--steel); margin-block-start:2px;
-}
+.brand__logo{ display:block; inline-size:clamp(170px, 20vw, 232px); height:auto; }
 
 .nav{ display:flex; align-items:center; gap:30px; }
 .nav__link{
@@ -702,7 +689,10 @@ a{ color:inherit; }
   max-inline-size:var(--wrap); margin-inline:auto; padding-inline:var(--gut);
   display:grid; grid-template-columns:1fr 2fr; gap:clamp(32px, 5vw, 64px);
 }
-.foot__note{ color:rgba(246,245,242,.55); font-size:15px; margin-block-start:10px; max-inline-size:28ch; }
+/* The lockup is dark-on-light, so the footer gives it a paper plate on the ink ground. */
+.brand--foot{ margin-inline-end:0; background:var(--paper); border-radius:6px; padding:12px 16px; }
+.brand--foot .brand__logo{ inline-size:clamp(170px, 20vw, 220px); }
+.foot__note{ color:rgba(246,245,242,.55); font-size:15px; margin-block-start:22px; max-inline-size:28ch; }
 .foot__meta{ display:grid; grid-template-columns:repeat(3, 1fr); gap:clamp(20px, 3vw, 36px); }
 .foot__meta dt{
   font-family:var(--f-mono); font-size:10px; font-weight:500;
